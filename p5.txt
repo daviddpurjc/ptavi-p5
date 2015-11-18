@@ -139,7 +139,7 @@ Captura una sesión SIP de una conversación con el número SIP sip:9999@qxip.ne
  ** ¿Cuál es su periodicidad? --
  ** ¿Cuánto es el valor máximo del delta y los valores medios y máximo del jitter? Max delta: 1.75ms y 323.04ms. Max jitter: 31.82ms y 47.38ms. Mean jitter: 20.13ms y 37.15ms.
  ** ¿Podrías reproducir la conversación desde Wireshark? ¿Cómo? Comprueba que poniendo un valor demasiado pequeño para el buffer de jitter, la conversación puede no tener la calidad necesaria.
-Seleccionamos un paquete de tipo RTP, protocolo usado para el intercambio de paquetes de audio en la conversación, y usamos Telephony -- VoIp Calls. Ahí podemos modificar el valor del Jitter Buffer, clicar en Decode y después reproducir la conversación. Efectivamente observamos que si seleccionamos valores del jitter buffer por debajo de 50 ms (valor por defecto) la calidad va mermando.
+Seleccionamos un paquete de tipo RTP, protocolo usado para el intercambio de paquetes de audio en la conversación, y usamos Telephony -- VoIp Calls. Ahí podemos modificar el valor del Jitter Buffer, clicar en Decode y después reproducir la conversación. Efectivamente observamos que si seleccionamos valores del jitter buffer por debajo del valor por defecto, la calidad va mermando. Lo óptimo (hablando de calidad de conversación) sería que el jitter buffer fuera 3 veces mayor que el jitter del flujo de paquetes RTP, aunque sería aceptable un jitter buffer del mismo valor que el jitter (perderíamos un 35% de los paquetes).
 
  ** ¿Sabrías decir qué tipo de servicio ofrece sip:9999@qxip.net? Es un usuario de prueba para Ekiga, gratuito, que te permite realizar pruebas de manera fácil y segura. Proporciona música en espera, a través de la empresa de software QXIP.
 
